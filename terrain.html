@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="user-scalable=no"/>
+        <style>
+            html, body, canvas {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                width: 100%;
+                height: 100%;
+            }
+            #touchGUI {
+                display: none;
+                position: fixed;
+                left: 5px;
+                top: 5px;
+            }
+            #formulaGUI {
+                display: none;
+                position: fixed;
+                right: 5px;
+                top: 5px;
+                font-size: 12px;
+                font-family: monospace;
+            }
+            #formulaGUI textarea {
+                width: 400px;
+                height: 200px;
+            }
+        </style>
+        <script src="lib/three.min.js"></script>
+    </head>
+    <body>
+        <canvas id="game" tabindex="0"></canvas>
+        <div id="touchGUI"><input type="button" id="formula-button" value="Formula"/></div>
+        <div id="formulaGUI">
+            <select id="formula-presets"></select><br>
+            <textarea id="formula"></textarea><br>
+            RADIUS_OF_EARTH: <input type="text" id="RADIUS_OF_EARTH" value="6e6"/><br>
+            XY_OFFSET: <input type="checkbox" id="XY_OFFSET"/><br>
+            <input type="button" id="formula-update" value="Update"/></div>
+        <script src="js/terrain.js"></script>
+    </body>
+</html>
